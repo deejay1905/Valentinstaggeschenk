@@ -1,0 +1,144 @@
+!DOCTYPE html
+html lang=de
+head
+meta charset=UTF-8
+meta name=viewport content=width=device-width, initial-scale=1.0
+titleFür Dich ❤️title
+
+style
+body{
+font-family Arial, sans-serif;
+margin0;
+backgroundlinear-gradient(135deg,#ff758c,#ff7eb3);
+colorwhite;
+text-aligncenter;
+}
+
+header{
+padding60px 20px;
+}
+
+h1{
+font-size3em;
+margin-bottom10px;
+}
+
+.container{
+displayflex;
+flex-wrapwrap;
+justify-contentcenter;
+gap20px;
+padding30px;
+}
+
+.card{
+width250px;
+height250px;
+backgroundwhite;
+colorblack;
+border-radius20px;
+overflowhidden;
+cursorpointer;
+transition0.3s;
+box-shadow0 10px 20px rgba(0,0,0,0.2);
+}
+
+.cardhover{
+transformscale(1.05);
+}
+
+.card img{
+width100%;
+height70%;
+object-fitcover;
+}
+
+.card p{
+padding10px;
+font-weightbold;
+}
+
+.modal{
+displaynone;
+positionfixed;
+top0;
+left0;
+width100%;
+height100%;
+backgroundrgba(0,0,0,0.8);
+justify-contentcenter;
+align-itemscenter;
+}
+
+.modal-content{
+backgroundwhite;
+colorblack;
+padding30px;
+border-radius15px;
+max-width400px;
+}
+
+button{
+padding10px 20px;
+bordernone;
+background#ff4d6d;
+colorwhite;
+border-radius10px;
+cursorpointer;
+margin-top15px;
+}
+style
+head
+
+body
+
+header
+h1Alles Gute zum Valentinstag ❤️h1
+pFür den schönsten Menschen in meinem Lebenp
+header
+
+div class=container
+
+div class=card onclick=openModal('msg1')
+img src=httpspicsum.photos3001
+pUnsere Erinnerungenp
+div
+
+div class=card onclick=openModal('msg2')
+img src=httpspicsum.photos3002
+pWarum ich dich liebep
+div
+
+div class=card onclick=openModal('msg3')
+img src=httpspicsum.photos3003
+pUnsere Zukunftp
+div
+
+div
+
+div id=modal class=modal
+div class=modal-content
+p id=modalTextp
+button onclick=closeModal()Schließen ❤️button
+div
+div
+
+script
+const messages={
+msg1Jeder Moment mit dir ist mein Lieblingsmoment ❤️,
+msg2Dein Lächeln, deine Art und dein Herz machen mich glücklich.,
+msg3Ich freue mich auf alles, was noch mit dir kommt 💕
+};
+
+function openModal(key){
+document.getElementById(modalText).innerText=messages[key];
+document.getElementById(modal).style.display=flex;
+}
+
+function closeModal(){
+document.getElementById(modal).style.display=none;
+}
+script
+
+body
+html
